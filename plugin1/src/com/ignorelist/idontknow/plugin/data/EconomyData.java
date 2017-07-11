@@ -82,4 +82,26 @@ public class EconomyData extends Data {
 			return;
 		}
 	}
+	
+	public int get(Player player){
+		for (ArrayList<Object> i : map){
+			if (i.get(0) == player){
+				return ((int) i.get(1));
+			}
+		}
+		return -1;
+	}
+	
+	public void set(Player player,int amount){
+		for (ArrayList<Object> i : map){
+			if (i.get(0) == player){
+				i.set(1, amount);
+				return;
+			}
+		}
+		ArrayList<Object> tmp = new ArrayList<Object>();
+		tmp.add(player);
+		tmp.add(amount);
+		map.add(tmp);
+	}
 }

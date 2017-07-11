@@ -30,15 +30,15 @@ public class Plugin extends JavaPlugin {
     
     @Override
     public boolean onCommand(CommandSender sender,Command cmd,String label,String[] args){
-    	switch (label){
-    	case "welcome":
-    		if (!(sender instanceof Player)){
-    				getServer().broadcastMessage("Welcome to the Server, "+args[0]+"!");
+		switch (label){
+		case "welcome":
+			if (!(sender instanceof Player)){
+					getServer().broadcastMessage("Welcome to the Server, "+args[0]+"!");
 	    				return true;
 	    		}
 	    				
-	    	default:
+    	default:
 	    		return false;
-	    	}
-	    }
+    	}
+    }
 }

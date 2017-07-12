@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -50,8 +49,11 @@ public class EconomyData extends Data {
 				ArrayList<Object> tmp1 = new ArrayList<Object>();
 				tmp1.add(player);
 				tmp1.add(amount);
-				ArrayList<ArrayList<Object>> tmp = new ArrayList<ArrayList<Object>>();
-				tmp.add(tmp1);
+				for (ArrayList<Object> i:map){
+					if (i.get(0)==tmp1.get(0)){
+						map.set(map.indexOf(i),tmp1);
+					}
+				}
 			}
 			
 			br.close();

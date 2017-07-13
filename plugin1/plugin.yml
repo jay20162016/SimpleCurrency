@@ -1,9 +1,5 @@
 main: com.ignorelist.idontknow.plugin.Plugin
-name: Plugin
+name: SimpleCurrency
 version: 1.0
 author: jay_jayjay
-description: An plugin like Essentials
-depend: [CS-CoreLib, Slimefun]
-commands:
-    welcome:
-        usage: /welcome <player>
+description: An simple currency plugin

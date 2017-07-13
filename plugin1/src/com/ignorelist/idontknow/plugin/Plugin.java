@@ -34,4 +34,20 @@ public class Plugin extends JavaPlugin {
 	    		return false;
     	}
     }
+	
+    public int get(Player player){
+        return econdata.get(player);
+    }
+    
+    public void set(Player player,int amount){
+        econdata.set(player,amount);
+    }
+
+    public void load(){
+        econdata.load(getServer);
+    }
+
+    public void save(){
+        econdata.save();
+    }
 }
